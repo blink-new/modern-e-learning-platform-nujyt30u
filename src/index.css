@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* Clarity White */
+    --foreground: 215 30% 20%; /* Text Charcoal */
+    --card: 0 0% 100%;
+    --card-foreground: 215 30% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 30% 20%;
+    --primary: 220 75% 51%; /* Knowledge Blue #2A5CDB */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 33% 97%; /* Focus Gray #F6F8FA */
+    --secondary-foreground: 215 30% 20%;
+    --muted: 210 33% 97%;
+    --muted-foreground: 215 20% 50%;
+    --accent: 267 41% 54%; /* Accent Purple #6554C0 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 75% 51%;
+    --success: 158 62% 46%; /* Success Green #36B37E */
+    
+    --chart-1: 220 75% 51%; /* Knowledge Blue */
+    --chart-2: 158 62% 46%; /* Success Green */
+    --chart-3: 267 41% 54%; /* Accent Purple */
+    --chart-4: 215 30% 20%; /* Text Charcoal */
+    --chart-5: 210 33% 97%; /* Focus Gray */
+    
+    --radius: 0.5rem;
+    
+    --sidebar-background: 210 33% 97%;
+    --sidebar-foreground: 215 30% 20%;
+    --sidebar-primary: 220 75% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 267 41% 54%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 220 75% 51%;
+  }
+  
+  .dark {
+    --background: 215 30% 12%;
+    --foreground: 0 0% 95%;
+    --card: 215 30% 15%;
+    --card-foreground: 0 0% 95%;
+    --popover: 215 30% 15%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 220 75% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 25% 25%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 215 25% 25%;
+    --muted-foreground: 215 20% 70%;
+    --accent: 267 41% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 25% 25%;
+    --input: 215 25% 25%;
+    --ring: 220 75% 51%;
+    --success: 158 62% 46%;
+    
+    --chart-1: 220 75% 51%;
+    --chart-2: 158 62% 46%;
+    --chart-3: 267 41% 54%;
+    --chart-4: 215 30% 80%;
+    --chart-5: 210 33% 30%;
+    
+    --sidebar-background: 215 30% 15%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 220 75% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 267 41% 54%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 215 25% 25%;
+    --sidebar-ring: 220 75% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: animate-in 0.3s ease-in-out;
+  }
+  
+  @keyframes animate-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
